@@ -7,8 +7,6 @@ import { data } from "../data/data";
 const Basket = () => {
   const [items, setItems] = useState(data);
 
-  console.log(items);
-
   const onAdd = (id) => {
     setItems((state) => {
       return state.map((item) => {

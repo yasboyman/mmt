@@ -6,6 +6,7 @@ const Total = ({ items, onReset }) => {
     const total = items.reduce((acc, i) => acc + i.price * i.amount, 0);
     return total.toFixed(2);
   };
+  totalItems();
 
   return (
     <div className="total_container">
