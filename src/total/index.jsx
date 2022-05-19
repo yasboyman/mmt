@@ -13,7 +13,7 @@ const Total = ({ items }) => {
    <p className="total_amount">${totalItems()}</p>
 
     <aside className="checkout_btn_container">
-      <p className="clear-btn">Clear</p>
+      <p className="clear_btn">Clear</p>
       <button className="checkout_btn">Check Out ></button>
     </aside>
   </div>;
