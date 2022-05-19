@@ -10,7 +10,7 @@ const Items = ({ name, amount, price, onAdd, id,onRemove, lastItem }) => {
         <p className="item_name">{name} </p>
         <p className="amount_box" onClick={()=> onAdd(id)}>{amount} </p>
         <p className="price">
-          ${price} <span onClick={() => onRemove(id)}>x</span>
+          ${price} <span  className="remove_btn" onClick={() => onRemove(id)}>x</span>
         </p>
       </div>
       { !lastItem && <hr className="dotted"/>}

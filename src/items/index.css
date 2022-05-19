@@ -10,7 +10,17 @@
 }
 
 .price {
+  display: flex;
+  flex-direction: row;
   color: #e38a5a;
+  align-items: baseline;
+}
+
+.remove_btn {
+  color: #ceccc9;
+  margin-left: 10px;
+  font-size: large;
+  font-weight: 800;
 }
 
 .amount_box {
