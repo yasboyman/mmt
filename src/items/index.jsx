@@ -8,16 +8,19 @@ const Items = ({ name, amount, price, onAdd, id,onRemove, lastItem }) => {
     <div className="basket">
       <div className="items_container">
         <p className="item_name">{name} </p>
-        <p className="amount_box" onClick={()=> onAdd(id)}>{amount} </p>
-        <p className="price">
-          ${price} <span  className="remove_btn" onClick={() => onRemove(id)}>x</span>
-        </p>
+        <aside className="priceAndAmount_container">
+          <p className="amount_box" onClick={() => onAdd(id)}>
+            {amount}{" "}
+          </p>
+          <p className="price">
+            ${price}{" "}
+            <span className="remove_btn" onClick={() => onRemove(id)}>
+              x
+            </span>
+          </p>
+        </aside>
       </div>
-      { !lastItem && <hr className="dotted"/>}
-      {/*{lastItem && <aside className="total_container">*/}
-      {/*  <p className="total_price">$12.99</p>*/}
-      
-      {/*</aside>}*/}
+      {!lastItem && <hr className="dotted" />}
     </div>
   );
 };

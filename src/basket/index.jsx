@@ -2,28 +2,10 @@ import React, { useState } from "react";
 import "./index.css";
 import Items from "../items";
 import Total from "../total";
+import { data } from "../data/data";
 
 const Basket = () => {
-  const [items, setItems] = useState([
-    {
-      id: 1,
-      name: "Mountain Dew",
-      amount: 1,
-      price: 3.6,
-    },
-    {
-      id: 2,
-      name: "Desperados",
-      amount: 1,
-      price: 3.6,
-    },
-    {
-      id: 3,
-      name: "Jack Daniels",
-      amount: 2,
-      price: 3.6,
-    },
-  ]);
+  const [items, setItems] = useState(data);
 
   console.log(items);
 
@@ -39,6 +21,10 @@ const Basket = () => {
     setItems((state) => {
       return state.filter((item) => item.id !== id);
     });
+  };
+
+  const onReset = () => {
+    setItems(data);
   };
 
   return (
@@ -58,7 +44,7 @@ const Basket = () => {
           );
         })}
       </div>
-      <Total items={items} />
+      <Total items={items} onReset={onReset} />
     </>
   );
 };

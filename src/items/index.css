@@ -3,6 +3,7 @@
   flex-direction: row;
   justify-content: flex-end;
   color: #7d7a7a;
+  overflow: scroll;
 }
 
 .item_name {
@@ -16,18 +17,33 @@
   align-items: baseline;
 }
 
+.priceAndAmount_container {
+  display: flex;
+  flex-direction: row;
+  width: 138px;
+  justify-content: space-between;
+}
+
 .remove_btn {
   color: #ceccc9;
   margin-left: 10px;
   font-size: large;
   font-weight: 800;
+  cursor: pointer;
+}
+
+.remove_btn:hover {
+  color: rgba(84, 243, 243, 0.3);
 }
 
 .amount_box {
-  border: 1px grey solid;
-  padding: 1px 4px;
-  margin-right: 117px;
-  position: absolute;
+  border: 1px rgb(214, 212, 209) solid;
+  padding: 1px 5px;
+  cursor: pointer;
+}
+
+.amount_box:hover {
+  border: 1px solid lightskyblue;
 }
 
 hr {
